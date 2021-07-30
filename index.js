@@ -33,8 +33,8 @@ morgan = require('morgan');
 app.use(morgan('common'));
 
 
-mongoose.connect('mongodb://localhost:27017/boxoffice', { useNewUrlParser: true, useUnifiedTopology: true });
-
+//mongoose.connect('mongodb://localhost:27017/boxoffice', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect( process.env.CONNECTION_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 //app.listen(8080, () => {
 //  console.log('Your app is listening on port 8080.');
 //});
